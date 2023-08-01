@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  frontend:
+    image: node:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    working_dir: . 
+    command: npm run dev
+    networks:
+      - mynet
+
+networks:
+  mynet:

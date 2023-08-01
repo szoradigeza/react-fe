@@ -1,0 +1,41 @@
+{
+  "name": "vite-reactts-eslint-prettier",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --config ./config/vite/vite.config.ts",
+    "build": "tsc && vite build --config ./config/vite/vite.config.ts",
+    "serve": "vite preview --config ./config/vite/vite.config.ts",
+    "lint": "eslint ./src --ext .jsx,.js,.ts,.tsx",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "@vitejs/plugin-react": "^4.0.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "pre-commit": "lint"
+}
